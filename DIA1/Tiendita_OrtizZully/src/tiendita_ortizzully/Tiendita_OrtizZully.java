@@ -69,10 +69,10 @@ public class Tiendita_OrtizZully {
                     break;
                     
                 case 4:
-                    int indice = 0;
+                    
                     // Actualizar cosmetico 
                     System.out.println("\n Ingrese el indice del cosmetico a actualizar: ");
-                    int Indice = teclado.nextInt();
+                    int indice = teclado.nextInt();
                     teclado.nextLine();
                     System.out.println("Ingrese el nuevo nombre del cosmetico: ");
                     String ActualizarNombre = teclado.nextLine();
