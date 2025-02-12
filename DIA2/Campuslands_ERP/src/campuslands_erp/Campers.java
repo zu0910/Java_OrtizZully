@@ -8,7 +8,6 @@ import java.util.List;
 
 public class Campers {
     int id;
-    User user;
     long numeroIdentificacion;
     String nombres;
     String apellidos;
@@ -28,12 +27,12 @@ public class Campers {
     List<Double> notaFiltro;
     
     public Campers(){}
-    public Campers ( int id, User user,long numeroIdentificacion,String nombres,String apellidos,
+    
+    public Campers ( int id,long numeroIdentificacion,String nombres,String apellidos,
     String direccion,String acudiente,long telefonoCelular,int telefonoFijo,List<String> tiposDeEstados,
     String estado,String fechaInicio,String fechaCierre,String grupo,String ruta,
     int moduloActual,String trainer,List<String> riesgo,List<Double> notaFiltro){
         this.id = id;
-        this.user = user;
         this.numeroIdentificacion = numeroIdentificacion;
         this.nombres = nombres;
         this.apellidos = apellidos;
@@ -55,11 +54,11 @@ public class Campers {
 
     @Override
     public String toString() {
-        return "Campers{" + "id=" + id + ", user=" + user + ", numeroIdentificacion=" + numeroIdentificacion + ", nombres=" + nombres + ", apellidos=" + apellidos + ", direccion=" + direccion + ", acudiente=" + acudiente + ", telefonoCelular=" + telefonoCelular + ", telefonoFijo=" + telefonoFijo + ", tiposDeEstados=" + tiposDeEstados + ", estado=" + estado + ", fechaInicio=" + fechaInicio + ", fechaCierre=" + fechaCierre + ", grupo=" + grupo + ", ruta=" + ruta + ", moduloActual=" + moduloActual + ", trainer=" + trainer + ", riesgo=" + riesgo + ", notaFiltro=" + notaFiltro + '}';
+        return "Campers{" + "id=" + id + ", numeroIdentificacion=" + numeroIdentificacion + ", nombres=" + nombres + ", apellidos=" + apellidos + ", direccion=" + direccion + ", acudiente=" + acudiente + ", telefonoCelular=" + telefonoCelular + ", telefonoFijo=" + telefonoFijo + ", tiposDeEstados=" + tiposDeEstados + ", estado=" + estado + ", fechaInicio=" + fechaInicio + ", fechaCierre=" + fechaCierre + ", grupo=" + grupo + ", ruta=" + ruta + ", moduloActual=" + moduloActual + ", trainer=" + trainer + ", riesgo=" + riesgo + ", notaFiltro=" + notaFiltro + '}';
     }
     
     void mostrarDatosCamper(){
-        System.out.println("---------DATOS DEL CAMPER----------");
+        System.out.println("----------- DATOS DEL CAMPER -------------");
         System.out.println("Numero de identificacion: " + numeroIdentificacion);
         System.out.println("Nombres: " + nombres );
         System.out.println("Apellidos: " + apellidos );
@@ -67,6 +66,7 @@ public class Campers {
         System.out.println("Acudiente: " + acudiente );
         System.out.println("Telefono celular: " + telefonoCelular );
         System.out.println("Telefono fijo: " + telefonoFijo);
+        System.out.println("-------------------------------------------");
     }
     
     void mostrarRiesgoCamper() {
