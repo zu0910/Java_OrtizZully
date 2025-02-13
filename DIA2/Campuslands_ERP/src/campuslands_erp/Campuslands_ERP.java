@@ -49,7 +49,7 @@ public class Campuslands_ERP {
         
         boolean finalizar = false;
         
-        while (!finalizar){
+        while (finalizar == false){
             System.out.println("-------- BIENVENIDOS A CAMPUSLANDS ----------");
             System.out.println("1). Camper.");
             System.out.println("2). Trainer.");
@@ -64,7 +64,7 @@ public class Campuslands_ERP {
                 case 1:
                     boolean salir = false;
         
-                    while (!salir){
+                    while (salir  == false){
                         System.out.println("---- BIENVENIDO CAMPER--------");
                         System.out.println("1). Reportes");
                         System.out.println("2). Cambiar informaciÃ³n.");
@@ -78,7 +78,7 @@ public class Campuslands_ERP {
                         switch (opcion){
                             case 1:
                                 boolean salir1 = false;
-                                while (!salir1) {
+                                while (salir1 == false) {
                                     System.out.println("\n ------------- REPORTES --------------------");
                                     System.out.println("1). Mostrar datos del camper.");
                                     System.out.println("2). Riesgo del camper.");
@@ -118,7 +118,7 @@ public class Campuslands_ERP {
 
                             case 2:
                                 boolean salir2 = false;
-                                while (!salir2){
+                                while (salir2 == false){
                                     System.out.println("\n ------ CAMBIAR INFORMACION -------");
                                     System.out.println("1). Cambiar direcciÃ³n.");
                                     System.out.println("2). Cambiar telefono movil.");
@@ -174,7 +174,7 @@ public class Campuslands_ERP {
                 case 2:
                     boolean salir3 = false;
                     
-                    while (!salir3){
+                    while (salir3 == false){
                         System.out.println("---- BIENVENIDO TRAINER --------");
                         System.out.println("1). Informacion personal");
                         System.out.println("2). Cambiar informaciÃ³n.");
@@ -255,29 +255,28 @@ public class Campuslands_ERP {
                     }
                     
                     break;
-                case 3:
-                        System.out.println("---- BIENVENIDO COORDINADOR --------");
-                        System.out.println("1). Litar campers.");
-                        System.out.println("2). Actualizar camper.");
-                        System.out.println("3). Registrar un camper.");
-                        System.out.println("4). Eliminar un camper. ");
-                        System.out.println("5). Listar trainers.");
-                        System.out.println("6). Actualizar trainers.");
-                        System.out.println("7). Registrar un trainers.");
-                        System.out.println("8). Eliminar un trainers. ");
-                        System.out.println("9). Listar coordinador.");
-                        System.out.println("10). Actualizar coordinador.");
-                        System.out.println("11). Registrar un coordinador.");
-                        System.out.println("12). Eliminar un coordinador. ");
-                        System.out.println("13). Salir");
-                        System.out.println("------------------------------");
-                        System.out.println("Ingrese su opciÃ³n: ");
-                        
-                        int opcion5 = scanner.nextInt();
-                        scanner.nextLine();
-                        
+                case 3:                        
                         boolean salir5 = false;
-                        while (!salir5){
+                        while (salir5==false){
+                            System.out.println("---- BIENVENIDO COORDINADOR --------");
+                            System.out.println("1). Litar campers.");
+                            System.out.println("2). Actualizar camper.");
+                            System.out.println("3). Registrar un camper.");
+                            System.out.println("4). Eliminar un camper. ");
+                            System.out.println("5). Listar trainers.");
+                            System.out.println("6). Actualizar trainers.");
+                            System.out.println("7). Registrar un trainers.");
+                            System.out.println("8). Eliminar un trainers. ");
+                            System.out.println("9). Listar coordinador.");
+                            System.out.println("10). Actualizar coordinador.");
+                            System.out.println("11). Registrar un coordinador.");
+                            System.out.println("12). Eliminar un coordinador. ");
+                            System.out.println("13). Salir");
+                            System.out.println("------------------------------");
+                            System.out.println("Ingrese su opcion: ");
+
+                            int opcion5 = scanner.nextInt();
+                            scanner.nextLine();
                             switch(opcion5){
                                 case 1:
                                     System.out.println("-------------- CAMPERS ---------------");
@@ -285,7 +284,7 @@ public class Campuslands_ERP {
                                     break;
                                 case 2:
                                     boolean salir6 = false;
-                                    while (!salir6){
+                                    while (salir6 == false){
                                         System.out.println("------------- ¿Que dato te gustaria actualizar?-----------");
                                         System.out.println("1). Nombres");
                                         System.out.println("2. Apellidos.");
@@ -476,10 +475,10 @@ public class Campuslands_ERP {
                                    
                               
                                     System.out.println("El camper fue registrado con exito.");
+                                    
                                     break;
                                 case 4:
                                     System.out.println("¿Que camper quieres eliminar? Ingresa sus nombres: ");
-                                    scanner.nextLine();
                                     String elimina = scanner.nextLine();
                                     boolean delete = false;
                                     for (int i = 0; i < campersList.size(); i++){
@@ -494,52 +493,9 @@ public class Campuslands_ERP {
                                     trainer1.mostrarInfoTrainer();
                                     break;
                                 case 6:
-                                    System.out.println("Ingresa los datos del nuevo trainer: ");
-                                    
-                                    System.out.println("Id:");
-                                    int id1 = scanner.nextInt();
-                                    scanner.nextLine();
-                                    
-                                    System.out.println("Numero de identificacion:");
-                                    long numeroIdentificacion1 = scanner.nextLong();
-                                    scanner.nextLine();
-                                    
-                                    System.out.println("Nombres:");
-                                    String nombres1 = scanner.nextLine();
-                                    
-                                    System.out.println("Apellidos:");
-                                    String apellidos1 = scanner.nextLine();
-                                    
-                                    System.out.println("Direccion:");
-                                    String direccion1 = scanner.nextLine();
-                                    
-                                    System.out.println("Telefono celular:");
-                                    long telefonoCelular1 = scanner.nextLong();
-                                    scanner.nextLine();
-                                    
-                                    System.out.println("Telefono fijo:");
-                                    int telefonoFijo1 = scanner.nextInt();
-                                    scanner.nextLine();
-                                    
-                                    System.out.println("Ruta:");
-                                    String ruta1 = scanner.nextLine();
-                                    
-                                    System.out.println("Grupo:");
-                                    String grupo1 = scanner.nextLine();
-                                    
-                                    Trainers nuevoTrainer = new Trainers(id1,numeroIdentificacion1, nombres1, apellidos1, direccion1, telefonoCelular1, telefonoFijo1,
-                                    ruta1, grupo1);
-                                    
-                                    trainersList.add(nuevoTrainer);
-                                    System.out.println(trainersList);
-                                   
-                                    
-                                    System.out.println("El Treiner fue registrado con exito.");
-                                    break;
-                                case 7:
                                     
                                     boolean salir7 = false;
-                                    while (!salir7){
+                                    while (salir7 == false){
                                         System.out.println("------------- ¿Que dato te gustaria actualizar del Trainer?-----------");
                                         System.out.println("1). Nombres");
                                         System.out.println("2). Apellidos.");
@@ -603,6 +559,51 @@ public class Campuslands_ERP {
                                         }
                                     }
                                     break;
+                                    
+                                case 7:
+                                   
+                                    System.out.println("Ingresa los datos del nuevo trainer: ");
+                                    
+                                    System.out.println("Id:");
+                                    int id1 = scanner.nextInt();
+                                    scanner.nextLine();
+                                    
+                                    System.out.println("Numero de identificacion:");
+                                    long numeroIdentificacion1 = scanner.nextLong();
+                                    scanner.nextLine();
+                                    
+                                    System.out.println("Nombres:");
+                                    String nombres1 = scanner.nextLine();
+                                    
+                                    System.out.println("Apellidos:");
+                                    String apellidos1 = scanner.nextLine();
+                                    
+                                    System.out.println("Direccion:");
+                                    String direccion1 = scanner.nextLine();
+                                    
+                                    System.out.println("Telefono celular:");
+                                    long telefonoCelular1 = scanner.nextLong();
+                                    scanner.nextLine();
+                                    
+                                    System.out.println("Telefono fijo:");
+                                    int telefonoFijo1 = scanner.nextInt();
+                                    scanner.nextLine();
+                                    
+                                    System.out.println("Ruta:");
+                                    String ruta1 = scanner.nextLine();
+                                    
+                                    System.out.println("Grupo:");
+                                    String grupo1 = scanner.nextLine();
+                                    
+                                    Trainers nuevoTrainer = new Trainers(id1,numeroIdentificacion1, nombres1, apellidos1, direccion1, telefonoCelular1, telefonoFijo1,
+                                    ruta1, grupo1);
+                                    
+                                    trainersList.add(nuevoTrainer);
+                                    System.out.println(trainersList);
+                                   
+                                    
+                                    System.out.println("El Treiner fue registrado con exito.");
+                                    break;
                                 case 8:
                                     System.out.println("¿Que Trainer quieres eliminar? Ingresa sus nombres: ");
                                     scanner.nextLine();
@@ -621,7 +622,7 @@ public class Campuslands_ERP {
                                     break;
                                 case 10:
                                     boolean salir8 = false;
-                                    while (!salir8){
+                                    while (salir8 == false){
                                         System.out.println("------------- ¿Que dato te gustaria actualizar del Coordinador?-----------");
                                         System.out.println("1). Nombres");
                                         System.out.println("2). Apellidos.");
