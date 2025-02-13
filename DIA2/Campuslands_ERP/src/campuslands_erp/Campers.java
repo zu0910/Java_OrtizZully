@@ -4,7 +4,7 @@
  */
 package campuslands_erp;
 
-import java.util.List;
+
 
 public class Campers {
     int id;
@@ -15,7 +15,6 @@ public class Campers {
     String acudiente;
     long telefonoCelular;
     int telefonoFijo;
-    List<String> tiposDeEstados;
     String estado;
     String fechaInicio;
     String fechaCierre;
@@ -23,15 +22,14 @@ public class Campers {
     String ruta;
     int moduloActual;
     String trainer;
-    List<String> riesgo;
-    List<Double> notaFiltro;
+    String riesgo;
+    Double notaFiltro;
     
-    public Campers(){}
     
     public Campers ( int id,long numeroIdentificacion,String nombres,String apellidos,
-    String direccion,String acudiente,long telefonoCelular,int telefonoFijo,List<String> tiposDeEstados,
+    String direccion,String acudiente,long telefonoCelular,int telefonoFijo,
     String estado,String fechaInicio,String fechaCierre,String grupo,String ruta,
-    int moduloActual,String trainer,List<String> riesgo,List<Double> notaFiltro){
+    int moduloActual,String trainer,String riesgo,Double notaFiltro){
         this.id = id;
         this.numeroIdentificacion = numeroIdentificacion;
         this.nombres = nombres;
@@ -40,7 +38,6 @@ public class Campers {
         this.acudiente = acudiente;
         this.telefonoCelular = telefonoCelular;
         this.telefonoFijo = telefonoFijo;
-        this.tiposDeEstados = tiposDeEstados;
         this.estado = estado;
         this.fechaInicio = fechaInicio;
         this.fechaCierre = fechaCierre;
@@ -54,7 +51,7 @@ public class Campers {
 
     @Override
     public String toString() {
-        return "Campers{" + "id=" + id + ", numeroIdentificacion=" + numeroIdentificacion + ", nombres=" + nombres + ", apellidos=" + apellidos + ", direccion=" + direccion + ", acudiente=" + acudiente + ", telefonoCelular=" + telefonoCelular + ", telefonoFijo=" + telefonoFijo + ", tiposDeEstados=" + tiposDeEstados + ", estado=" + estado + ", fechaInicio=" + fechaInicio + ", fechaCierre=" + fechaCierre + ", grupo=" + grupo + ", ruta=" + ruta + ", moduloActual=" + moduloActual + ", trainer=" + trainer + ", riesgo=" + riesgo + ", notaFiltro=" + notaFiltro + '}';
+        return "Campers{" + "id=" + id + ", numeroIdentificacion=" + numeroIdentificacion + ", nombres=" + nombres + ", apellidos=" + apellidos + ", direccion=" + direccion + ", acudiente=" + acudiente + ", telefonoCelular=" + telefonoCelular + ", telefonoFijo=" + telefonoFijo + ", estado=" + estado + ", fechaInicio=" + fechaInicio + ", fechaCierre=" + fechaCierre + ", grupo=" + grupo + ", ruta=" + ruta + ", moduloActual=" + moduloActual + ", trainer=" + trainer + ", riesgo=" + riesgo + ", notaFiltro=" + notaFiltro + '}';
     }
     
     void mostrarDatosCamper(){
@@ -70,11 +67,9 @@ public class Campers {
     }
     
     void mostrarRiesgoCamper() {
-        if (estado.equals("Aprobado") || estado.equals("Cursado")){
-            System.out.println("Tu riesgo es: " + riesgo.get(moduloActual -1));
-        } else {
-            System.out.println("Tu estado es: " + estado + ", por lo tanto no tienes riego.");
-        }
+        
+        System.out.println("Tu riesgo es: " + riesgo);
+        
     }
     
     void mostrarRutaCamper(){

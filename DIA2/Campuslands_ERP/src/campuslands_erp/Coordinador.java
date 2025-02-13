@@ -17,7 +17,6 @@ public class Coordinador {
     long telefonoCelular;
     int telefonoFijo;
     
-    public Coordinador () {}
 
     public Coordinador(int id, long numeroIdentificacion, String nombres, String apellidos, String direccion, long telefonoCelular, int telefonoFijo) {
         this.id = id;
@@ -34,5 +33,14 @@ public class Coordinador {
         return "Coordinador{" + "id=" + id + ", numeroIdentificacion=" + numeroIdentificacion + ", nombres=" + nombres + ", apellidos=" + apellidos + ", direccion=" + direccion + ", telefonoCelular=" + telefonoCelular + ", telefonoFijo=" + telefonoFijo + '}';
     }
     
-    
+    void mostrarInfoCoordi(){
+        System.out.println("----------- DATOS DEL COORDINADOR -------------");
+        System.out.println("Numero de identificacion: " + numeroIdentificacion);
+        System.out.println("Nombres: " + nombres );
+        System.out.println("Apellidos: " + apellidos );
+        System.out.println("Direccion: " + direccion);
+        System.out.println("Telefono celular: " + telefonoCelular );
+        System.out.println("Telefono fijo: " + telefonoFijo);
+        System.out.println("-------------------------------------------");
+    }
 }

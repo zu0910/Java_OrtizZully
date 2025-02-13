@@ -19,7 +19,6 @@ public class Trainers {
     String ruta;
     String grupo;
     
-    Trainers () {}
 
     public Trainers(int id, long numeroIdentificacion, String nombres, String apellidos, String direccion, long telefonoCelular, int telefonoFijo, String ruta, String grupo) {
         this.id = id;
