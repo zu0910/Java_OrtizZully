@@ -2,11 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package proyecto_notas_vibrantes_ortizzully;
+package proyecto_notas_vibrantes;
 
 /**
  *
- * @author Uniminuto Tibu
+ * @author const
  */
 public class Concierto {
     int id;
@@ -29,7 +29,4 @@ public class Concierto {
     public String toString() {
         return "Concierto{" + "id=" + id + ", nombre=" + nombre + ", artista=" + artista + ", fecha=" + fecha + ", lugar=" + lugar + ", PrecioBase=" + PrecioBase + '}';
     }
-    
-    
-    
 }
